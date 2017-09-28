@@ -73,7 +73,7 @@ productFlavors.all { flavor ->
 
     buildTypes {
         debug { // 为了不和 release 版本冲突
-            applicationIdSuffix ".debug"
+            //applicationIdSuffix ".debug"
             debuggable true
             zipAlignEnabled true
             minifyEnabled false
@@ -93,14 +93,14 @@ productFlavors.all { flavor ->
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile rootProject.ext.dependencies["SupportAppcompatV4"]
     compile rootProject.ext.dependencies["SupportAppcompatV7"]
     compile rootProject.ext.dependencies["SupportRecyclerViewV7"]
     compile rootProject.ext.dependencies["SupportDesign"]
     compile rootProject.ext.dependencies["SupportCardview"]
-    compile (rootProject.ext.dependencies["Butterknife"]) {
-        exclude group : 'com.android.support'
+    compile(rootProject.ext.dependencies["Butterknife"]) {
+        exclude group: 'com.android.support'
     }
     annotationProcessor rootProject.ext.dependencies["ButterknifeCompiler"]
     compile rootProject.ext.dependencies["Glide"]
@@ -122,4 +122,5 @@ dependencies {
     compile 'com.google.android:flexbox:0.3.0-alpha3'
     compile 'com.google.android.gms:play-services-ads:10.2.4'
     testCompile 'junit:junit:4.12'
+    compile project(':PushSDK')
 }

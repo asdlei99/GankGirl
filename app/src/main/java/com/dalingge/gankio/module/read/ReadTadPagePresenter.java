@@ -7,6 +7,7 @@ import com.dalingge.gankio.Constants;
 import com.dalingge.gankio.common.base.BaseRxPresenter;
 import com.dalingge.gankio.common.rxjava.Function0;
 import com.dalingge.gankio.data.model.ReadTypeBean;
+import com.dalingge.gankio.network.HttpExceptionHandle;
 import com.dalingge.gankio.network.HttpRetrofit;
 import com.dalingge.gankio.network.RequestCommand;
 
@@ -49,6 +50,11 @@ public class ReadTadPagePresenter extends BaseRxPresenter<ReadTadPageFragment> {
                     @Override
                     public void accept(@NonNull ReadTadPageFragment readTadPageFragment, @NonNull List<ReadTypeBean> readTypeBeen) throws Exception {
                         readTadPageFragment.onData(readTypeBeen);
+                    }
+                }, new BiConsumer<ReadTadPageFragment, HttpExceptionHandle.ResponeThrowable>() {
+                    @Override
+                    public void accept(@NonNull ReadTadPageFragment readTadPageFragment, @NonNull HttpExceptionHandle.ResponeThrowable responeThrowable) throws Exception {
+
                     }
                 });
     }

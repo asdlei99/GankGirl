@@ -122,11 +122,13 @@ public class SubmitGankActivity extends BaseToolbarActivity<SubmitGankPresenter>
 
     private void setError(TextInputEditText editText, @StringRes int errorRes) {
         TextInputLayout layout = (TextInputLayout) editText.getParent().getParent();
+        layout.setErrorEnabled(true);
         layout.setError(getString(errorRes));
     }
 
     private void removeError(TextInputEditText editText) {
         TextInputLayout layout = (TextInputLayout) editText.getParent().getParent();
+        layout.setErrorEnabled(false);
         layout.setError(null);
     }
 

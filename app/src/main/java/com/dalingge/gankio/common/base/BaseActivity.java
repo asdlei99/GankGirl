@@ -9,6 +9,7 @@ import com.dalingge.gankio.common.factory.ReflectionPresenterFactory;
 import com.dalingge.gankio.common.widgets.tips.DefaultTipsHelper;
 import com.dalingge.gankio.common.widgets.tips.TipsHelper;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+import com.umeng.message.PushAgent;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -64,6 +65,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends RxAppCompatA
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         setContentView(getLayout());//设置布局内容
         if (savedInstanceState != null)//
             presenterDelegate.onRestoreInstanceState(savedInstanceState.getBundle(PRESENTER_STATE_KEY));

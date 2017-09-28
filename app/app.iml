@@ -119,14 +119,12 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
@@ -143,7 +141,7 @@
     <orderEntry type="library" exported="" name="api-0.0.3" level="project" />
     <orderEntry type="library" exported="" name="reactive-streams-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="parsingplayer-2.0.4" level="project" />
-    <orderEntry type="library" exported="" name="analytics-6.1.0" level="project" />
+    <orderEntry type="library" exported="" name="analytics-6.1.2" level="project" />
     <orderEntry type="library" exported="" name="retrofit-2.2.0" level="project" />
     <orderEntry type="library" exported="" name="converter-gson-2.2.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-10.2.4" level="project" />
@@ -188,5 +186,9 @@
     <orderEntry type="library" exported="" name="appcompat-v7-25.1.1" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.0" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.1.1" level="project" />
+    <orderEntry type="module" module-name="PushSDK" exported="" />
+    <orderEntry type="library" exported="" name="utdid4all-1.1.5.3_proguard" level="project" />
+    <orderEntry type="library" exported="" name="com.umeng.message_3.1.1a" level="project" />
+    <orderEntry type="library" exported="" name="alicloud-android-sdk-httpdns-1.0.7" level="project" />
   </component>
 </module>

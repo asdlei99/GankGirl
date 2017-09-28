@@ -203,7 +203,6 @@ public class HttpRetrofit {
         return tObservable -> tObservable.subscribeOn(Schedulers.io())//访问网络切换异步线程
                 .unsubscribeOn(Schedulers.io())//销毁访问网络切换异步线程
                 .observeOn(AndroidSchedulers.mainThread()); //响应结果处理切换成主线程
-
     }
 
     /**

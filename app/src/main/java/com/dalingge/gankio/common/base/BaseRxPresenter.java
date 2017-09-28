@@ -13,8 +13,6 @@ import com.dalingge.gankio.common.rxjava.delivery.Delivery;
 import com.dalingge.gankio.network.HttpExceptionHandle;
 import com.dalingge.gankio.network.RequestContext;
 
-import org.reactivestreams.Subscription;
-
 import java.util.ArrayList;
 
 import io.reactivex.Observable;
@@ -57,7 +55,7 @@ public class BaseRxPresenter<View> extends BasePresenter<View> {
 
     /**
      * 自动注册订阅退订在摧毁。
-     * See {@link ListCompositeDisposable#(Subscription) for details.}
+     * See {@link ListCompositeDisposable#(Disposable) for details.}
      *
      * @param disposable 添加定于
      */
